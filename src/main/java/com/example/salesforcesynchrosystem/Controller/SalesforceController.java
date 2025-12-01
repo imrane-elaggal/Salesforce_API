@@ -1,7 +1,7 @@
 package com.example.salesforcesynchrosystem.Controller;
 
 import com.example.salesforcesynchrosystem.Entities.SalesforceProjectDTO;
-import com.example.salesforcesynchrosystem.Services.ProjectSyncService;
+import com.example.salesforcesynchrosystem.Services.SalesforceSyncService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public final class SalesforceWebhookController {
 
-    private final ProjectSyncService syncService;
+    private final SalesforceSyncService syncService;
 
     @PostMapping("/webhook")
     public String handleWebhook(@RequestBody SalesforceProjectDTO dto) {
